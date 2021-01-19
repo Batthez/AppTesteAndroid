@@ -1,4 +1,4 @@
-package com.matthbr.whatsappclone.view.adapter
+package com.matthbr.whatsappclone.view.conversations
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.matthbr.whatsappclone.R
-import com.matthbr.whatsappclone.view.adapter.callback.ConversationsCallback
-import com.matthbr.whatsappclone.view.model.Conversations
+import com.matthbr.whatsappclone.view.conversations.model.Conversations
 
 
 class ConversationsAdapter(
@@ -25,7 +24,7 @@ class ConversationsAdapter(
     }
 
     fun submitList(newConversations : List<Conversations>){
-        val diffResult = DiffUtil.calculateDiff(ConversationsCallback(newConversations, newConversations))
+        val diffResult = DiffUtil.calculateDiff(ConversationsAdapterCallback(newConversations, newConversations))
         diffResult.dispatchUpdatesTo(this)
     }
 
@@ -51,7 +50,7 @@ class ConversationsAdapter(
         }
 
         companion object{
-            fun from(parent: ViewGroup) : ConversationsViewHolder{
+            fun from(parent: ViewGroup) : ConversationsViewHolder {
                 val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_conversation_layout, parent,false)
                 return ConversationsViewHolder(itemView)
             }

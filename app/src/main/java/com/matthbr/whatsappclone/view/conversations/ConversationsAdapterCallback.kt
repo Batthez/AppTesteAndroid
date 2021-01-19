@@ -1,12 +1,11 @@
-package com.matthbr.whatsappclone.view.adapter.callback
+package com.matthbr.whatsappclone.view.conversations
 
 import androidx.recyclerview.widget.DiffUtil
-import com.matthbr.whatsappclone.view.model.Conversations
-import kotlin.math.sign
+import com.matthbr.whatsappclone.view.conversations.model.Conversations
 
-class ConversationsCallback(
-    val oldList : List<Conversations>,
-    val newList : List<Conversations>
+class ConversationsAdapterCallback(
+        val oldList : List<Conversations>,
+        val newList : List<Conversations>
 ) : DiffUtil.Callback() {
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
         return oldList[oldItemPosition].id == newList[newItemPosition].id

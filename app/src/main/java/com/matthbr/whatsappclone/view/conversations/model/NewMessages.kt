@@ -1,4 +1,4 @@
-package com.matthbr.whatsappclone.view.model
+package com.matthbr.whatsappclone.view.conversations.model
 
 class NewMessages(
   var message : String,
