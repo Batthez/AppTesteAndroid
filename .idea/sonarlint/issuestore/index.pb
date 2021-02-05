@@ -25,3 +25,9 @@ f
 6app/src/main/java/com/matthbr/whatsappclone/mvi/MVI.kt,1\3\138479f157785def941459c8192b1644a4c73fd7
 †
 Vapp/src/main/java/com/matthbr/whatsappclone/view/conversations/ConversationsAdapter.kt,5\2\52d10c508d5365a854fcd37dec9ca523099d4216
+s
+Capp/src/main/java/com/matthbr/whatsappclone/domain/model/Message.kt,9\d\9de02dab02f8ad154eb0f7033599ca4389a58455
+r
+Bapp/src/main/java/com/matthbr/whatsappclone/data/dao/MessageDao.kt,c\8\c8a1f0004615c665cb485a03e4e8e2c52f56f69e
+w
+Gapp/src/main/java/com/matthbr/whatsappclone/data/database/WhatsAppDb.kt,f\4\f42c4517a02fb21a1794f3a80d21df5c55d82685
