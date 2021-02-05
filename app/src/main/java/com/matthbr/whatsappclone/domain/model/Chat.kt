@@ -19,7 +19,7 @@ import androidx.room.ForeignKey.CASCADE
             onDelete = CASCADE
         ),
         ForeignKey(
-            entity = Messages::class,
+            entity = Message::class,
             parentColumns = ["id"],
             childColumns = ["message"],
             onDelete = CASCADE

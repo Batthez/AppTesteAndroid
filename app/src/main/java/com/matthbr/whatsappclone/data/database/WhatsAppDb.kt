@@ -8,14 +8,14 @@ import com.matthbr.whatsappclone.data.dao.ChatDao
 import com.matthbr.whatsappclone.data.dao.MessageDao
 import com.matthbr.whatsappclone.data.dao.UserDao
 import com.matthbr.whatsappclone.domain.model.Chat
-import com.matthbr.whatsappclone.domain.model.Messages
+import com.matthbr.whatsappclone.domain.model.Message
 import com.matthbr.whatsappclone.domain.model.Users
 
 @Database(
     version = 1,
     exportSchema = false,
     entities = [
-        Messages::class,
+        Message::class,
         Chat::class,
         Users::class
     ]

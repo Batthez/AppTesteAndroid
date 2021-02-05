@@ -14,7 +14,7 @@ import androidx.room.ForeignKey.CASCADE
     )
   ]
 )
-data class Messages(
+data class Message(
   val id : String,
   val message : String,
   val date : String,

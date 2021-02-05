@@ -3,25 +3,25 @@ package com.matthbr.whatsappclone.data.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.matthbr.whatsappclone.domain.model.Messages
+import com.matthbr.whatsappclone.domain.model.Message
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface MessageDao {
 
     @Insert
-    suspend fun insertNewMessage(messages : Messages)
+    suspend fun insertNewMessage(vararg messages : Message)
 
     @Query(
         """
-        SELECT Messages.* 
-        FROM Messages 
+        SELECT Message.* 
+        FROM Message 
         INNER JOIN Chat 
-        ON Messages.chatId = Chat.menssage
+        ON Message.chatId = Chat.menssage
         WHERE 
         chat.destination = :receiverId
         """
     )
-    suspend fun getMessagesFromChat(receiverId: String) : Flow<List<Messages>>
+    suspend fun getMessagesFromChat(receiverId: String) : Flow<List<Message>>
 
 }
