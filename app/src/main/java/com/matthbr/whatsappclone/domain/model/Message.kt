@@ -15,9 +15,9 @@ import androidx.room.ForeignKey.CASCADE
   ]
 )
 data class Message(
-  val id : String,
-  val message : String,
-  val date : String,
-  val chatId : String,
-  val messageType : Int
+  val id: String,
+  val message: String,
+  val date: String,
+  val chatId: String,
+  val messageType: Int
 )

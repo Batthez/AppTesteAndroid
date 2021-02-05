@@ -7,13 +7,13 @@ import androidx.room.ForeignKey.CASCADE
 @Entity(
     foreignKeys = [
         ForeignKey(
-            entity = Users::class,
+            entity = User::class,
             parentColumns = ["remetent"],
             childColumns = ["id"],
             onDelete = CASCADE
         ),
         ForeignKey(
-            entity = Users::class,
+            entity = User::class,
             parentColumns = ["destination"],
             childColumns = ["id"],
             onDelete = CASCADE
@@ -28,7 +28,7 @@ import androidx.room.ForeignKey.CASCADE
 )
 data class Chat(
     var id: String,
-    var remetent : String,
+    var remetent: String,
     var destination: String,
-    var menssage : String
+    var menssage: String
 )

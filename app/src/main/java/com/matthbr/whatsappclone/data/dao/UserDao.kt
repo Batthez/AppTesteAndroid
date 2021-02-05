@@ -3,16 +3,15 @@ package com.matthbr.whatsappclone.data.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.matthbr.whatsappclone.domain.model.Users
-import kotlinx.coroutines.flow.Flow
+import com.matthbr.whatsappclone.domain.model.User
 
 @Dao
 interface UserDao {
 
-    @Query("SELECT * FROM Users")
-    suspend fun getAllUsers() : Flow<List<Users>>
+    @Query("SELECT * FROM User")
+    suspend fun getAllUsers(): List<User>
 
     @Insert
-    suspend fun insertUser(vararg user: Users)
+    suspend fun insertUser(vararg user: User)
 
 }

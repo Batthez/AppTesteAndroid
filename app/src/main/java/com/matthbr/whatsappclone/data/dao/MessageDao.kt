@@ -4,13 +4,12 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.matthbr.whatsappclone.domain.model.Message
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface MessageDao {
 
     @Insert
-    suspend fun insertNewMessage(vararg messages : Message)
+    suspend fun insertNewMessage(vararg messages: Message)
 
     @Query(
         """
@@ -22,6 +21,6 @@ interface MessageDao {
         chat.destination = :receiverId
         """
     )
-    suspend fun getMessagesFromChat(receiverId: String) : Flow<List<Message>>
+    suspend fun getMessagesFromChat(receiverId: String): List<Message>
 
 }
